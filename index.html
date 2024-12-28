@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Leila Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Leila
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#services">Services</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#services">Service</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="main.png" alt="Leila">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Leila</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                <div class="social-links">
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <button>Contact me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" data-aos="fade-up" data-aos-duration="1500">
+        <h2>About Me</h2>
+        <p>Hello! I'm Leila, a passionate web developer with a love for creating dynamic, interactive, and user-friendly websites. I specialize in front-end development and have experience with a variety of technologies.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" data-aos="fade-up" data-aos-duration="1500">
+        <h2>My Skills</h2>
+        <div class="skill-list">
+            <div class="skill" data-aos="fade-up" data-aos-duration="1500"><i class="fa-brands fa-html5"></i> HTML5</div>
+            <div class="skill" data-aos="fade-up" data-aos-duration="1500"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+            <div class="skill" data-aos="fade-up" data-aos-duration="1500"><i class="fa-brands fa-js"></i> JavaScript</div>
+            <div class="skill" data-aos="fade-up" data-aos-duration="1500"><i class="fa-brands fa-react"></i> React</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" data-aos="fade-up" data-aos-duration="1500">
+        <h2>My Services</h2>
+        <div class="services-list">
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1500">
+                <h3>Web Design</h3>
+                <p>Crafting beautiful and user-centric website designs that provide an optimal user experience.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1500">
+                <h3>Front-End Development</h3>
+                <p>Building dynamic and responsive websites using modern web technologies.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1500">
+                <h3>SEO Optimization</h3>
+                <p>Improving website visibility and ranking on search engines to drive more traffic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up" data-aos-duration="1500">
+    <h2>Contact Me</h2>
+    <form action="contact.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+        
+        // Function to handle the hamburger menu
+        function hamburg() {
+            document.querySelector('.dropdown').style.display = 'block';
+        }
+
+        // Function to close the dropdown menu
+        function cancel() {
+            document.querySelector('.dropdown').style.display = 'none';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
